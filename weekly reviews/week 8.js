@@ -35,6 +35,85 @@ moves deleration to the top only with the keyword var NOT let and const
 you will get refrance error with let and const and you willg et type error with var since it knows it exist but doesnt know what its declared as
 */ 
 
+//------------------------------------------------------------------------------------------------------------------------------------------------
+
+//SCOPE 
+
+/* determintes the accessibility of variables 
+
+there are 4 types of scope: global, function, block (ES6), lexical scope 
+global scope: can be used anywhere within the file but becareful with the declleration 
+function scope: if you create a variable inside var or not it can not be used outside 
+^^ var let const behave the same in these scopes 
+
+block {} scope: var can be used outside of the block and does not support block 
+
+
+lexical scope: used with nested functions which is saying he nested can access the outer but not the other way around 
+var let and cost behave the same way in this
+
+//-------------------------------------------------------------------------------------------------------------------------------
+
+//CLOSURE 
+
+/* can help with not having some variables be reassigned 
+its basicly establishing the varibale within the function so it cant be acessed anywhere outside of it. 
+
+//------------------------------------------------------------------------------------------------------------------------------------------
+
+// ES6
+
+/* var has been around since 1995 
+let and const came in ES6 
+var is hoistined while the others are not inaddition let can be reassigned while const can not. 
+let is mutable and const is immutable  */ 
+
+/* string templete: allows you to do miltiple lines, can easily add expressions via templete litterials ${} */ 
+
+// arrow functions 
+
+// spread operator ; allows the properties of an object or the index of an array to be added to another one or copies with ease 
+// default parameters : the declared variables in a function need to have a fall back incase you dont give any inputs for it 
+
+function example ( input1 = "ali", input2 = "hagag"){
+// here is an example of default perameters, the default will be hagag if they dont put anything 
+}
+
+
+// rest parameters (...) --> allow us to create a method that works with any number of aruments 
+
+function sum (...arg){
+    let sum = 0
+    for (const ar of arg){
+        let sum = 0
+        sum += ar
+    }
+    return sum
+}
+
+// array destructurig : allows us to make variables for each index of an array without the extra mess 
+// object destructring: same as array but needs to have the same name as the keys
+
+//_---------------------------------------------------------------------------------------------------------------------------
+
+//OOP --> Object Oriented Programming 
+
+/* allows programmers to put real life objects into code 
+it helps maintain code easily 
+it has code reusability and inheritance 
+simplicity 
+
+
+complited lanuges use class orirnted oop languges 
+Javascript is progotype based funcional launguage 
+es6 added classes to JS 
+
+typeScript is a superset ofJ JS  and is typed lanugnage 
+*/
+
+
+
+
 
 
 
