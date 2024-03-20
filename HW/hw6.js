@@ -79,6 +79,22 @@ console.log(no3and5([7, 4, 11, 23, 17]));
 
 // task 8
 
+const isPrime = num => {
+    if(num < 2) return false;
+    if(num === 2 || num === 3) return true;
+    if(num % 2 === 0 || num % 3 === 0) return false;
+
+    let i = 5;
+
+    while (i < num) {
+        if (num % i === 0) return false;
+        i += 2;
+    }
+
+    return true;
+}
+
+const countPrimes = arr => arr.reduce((acc, curr) => isPrime(curr) ? acc + 1 : acc, 0);
 // task 9
 const removeDuplicates = array => array.reduce((newArr, nums) => (!(newArr.includes(nums))) ? newArr.concat(nums) : newArr,[])
 
