@@ -69,13 +69,6 @@ console.log(sumOfDigits("J3avasc5rip6t"))
 // task 7
 
 
-/* 
-map 
-then using map you need to do a for loop for each one 
-
-
-*/
-
 const arrFactorial = array => {
     return array.map(numToBeFac => {
         let factorial = 1;

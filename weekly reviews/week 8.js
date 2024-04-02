@@ -115,9 +115,173 @@ typeScript is a superset ofJ JS  and is typed lanugnage
 
 
 
+//10 -setter-Getter
+class Book {
+        constructor(title, genre, page) {
+            this.title = title;
+            this.genre = genre;
+            this.page = page;
+        }
+    getTitle(){
+        return this.title
+    }
+    }
+
+
+const book1 = new Book("js","journal",1000)
+
+
+
+// book1.page = -5
+// book1.title = ''
+
+// console.log(book1) // Book { title: '', genre: 'journal', page: -5 }
+
+
+
+// setPage(numOfPages){
+//     if(numOfPages > 0) this.page = numOfPages
+//     else throw Error ('Number of pages can NOT be zero!!')
+// }
+
+// POINT 
+
+
+
+
+// callback example
+
+function connectToSource(callback) {
+    setTimeout(() => {
+        console.log(`you are now connected to Source`)
+        callback()
+    }, 5000)
+
+}
+
+
+function fetchData(callback) {
+    setTimeout(() => {
+        console.log(`you have now fetched data`)
+        callback()
+    }, 3000)
+}
+
+function useData() {
+    setTimeout(() => {
+        console.log(`you are now using the data that you have fetched`)
+    }, 1000)
+}
+
+
+function order (){
+    connectToSource(()=> {
+        fetchData(() => {
+            useData()
+        })
+    })
+}
+
+order();
 
 
 
 
 
+Program.then(()=> {
+    goToApp(() => {
+        clickOnButton(()=>{
+            closeApp()
+        })
+    })
+})
 
+
+
+
+
+//__________________________________________________________
+
+function goToCostco() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('GO TO COSTCO');
+            if(true) resolve();
+            else reject('Car is broken!');
+        }, 2000);
+    });
+}
+
+function getMeat() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('GET THE MEAT');
+            if(true) resolve();
+            else reject('Could not get the meat, Costco was closed!');
+        }, 1500);
+    });
+}
+
+function cook() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('COOK');
+            if(true) resolve();
+            else reject('Cooking did not go well!');
+        }, 3000);
+    });
+}
+
+function serve() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('SERVE');
+            if(true) resolve();
+            else reject('Serving issue');
+        }, 1000);
+    });
+}
+
+function eat() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('EAT');
+            if(true) resolve();
+            else reject('Could not eat');
+        }, 500);
+    });
+}
+
+// promises handling with then() and catch()
+function party1() {
+
+}
+
+// promises handling with async and await
+function party2() {
+    
+}
+
+
+async function process(){
+    try{
+    await goToCostco()
+    await getMeat()
+    await cook()
+    await serve()
+    await eat()
+    } catch(err){
+        console.log(err)
+    }
+}
+
+
+process()
+
+
+
+function process2(){
+    goToCostco().then(()=>{
+        
+    })
+}
