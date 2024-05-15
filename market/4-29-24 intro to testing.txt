@@ -1,0 +1,12 @@
+softwear testing:
+
+titles:
+ SDET --> Softwear Develobpent Engineer in test
+
+ Automation Engineer
+QA Automation Engineer 
+Manual Tester 
+QA Tester 
+
+
+why are Automation testers needed in tech companies:  --> 
